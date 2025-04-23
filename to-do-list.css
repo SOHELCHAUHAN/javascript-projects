@@ -1,0 +1,320 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #faaaaa;
+    color: #333;
+    padding: 0;
+}
+
+.to-do-container {
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 4px 2px 3px pink;
+}
+
+.add-task {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    width: 59vw;
+    height: auto;
+    padding: 10px;
+    font-size: 13px;
+}
+
+#task-due-date {
+    padding: 8px;
+    font-size: 13px;
+    width: 29%;
+}
+
+#add-task-btn {
+    padding: 10px 20px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.filters {
+    text-align: right;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 60vw;
+    height: auto;
+}
+
+.filter-btn {
+    background: #e0e0e0;
+    border: none;
+    padding: 8px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.filter-btn:hover {
+    background: #d0d0d0;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px 8px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '' ;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 45%;
+    background-image: url(uncheck.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 10px;
+}
+ul li.checked{
+   color: #444;
+   text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url("check.png");
+}
+
+
+ul li>span {
+    position: absolute;
+    right: 0;
+    font-size: 23px;
+    top: 16%;
+    width: 24px;
+    height: 24px;
+    color: crimson;
+    border-radius: 15px;
+    /* background: yellow; */
+    text-align: center;
+    font-style: oblique;
+}
+
+ul li span:hover {
+    cursor: pointer;
+    background-color: #c00;
+    color: black;
+}
+
+.task-list li.completed .task-name {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-name {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.task-due-date {
+    font-size: 12px;
+    color: #666;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.delete-btn {
+    background: transparent;
+    border: none;
+    color: #c00;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.dark-mode-toggle {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #eee;
+}
+
+body.dark-mode .to-do-container {
+    background: #1e1e1e;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .filter-btn {
+    background: #333;
+    color: #eee;
+}
+
+body.dark-mode .filter-btn:hover {
+    background: #444;
+}
+
+body.dark-mode .task-list li {
+    border-bottom: 1px solid #444;
+}
+
+body.dark-mode .task-list li.completed .task-name {
+    color: #bbb;
+}
+
+body.dark-mode .delete-btn {
+    color: #f66;
+}
+
+/* for toggle bacground color*/
+
+.checkbox-wrapper-54 input[type="checkbox"] {
+    visibility: hidden;
+    display: none;
+}
+
+.checkbox-wrapper-54 *,
+.checkbox-wrapper-54 ::after,
+.checkbox-wrapper-54 ::before {
+    box-sizing: border-box;
+}
+
+/* The switch - the box around the slider */
+.checkbox-wrapper-54 .switch {
+    --width-of-switch: 3.5em;
+    --height-of-switch: 2em;
+    /* size of sliding icon -- sun and moon */
+    --size-of-icon: 1.4em;
+    /* it is like a inline-padding of switch */
+    --slider-offset: 0.3em;
+    position: relative;
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
+    display: inline-block;
+}
+
+/* The slider */
+.checkbox-wrapper-54 .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f4f4f5;
+    transition: 0.4s;
+    border-radius: 30px;
+}
+
+.checkbox-wrapper-54 .slider:before {
+    position: absolute;
+    content: "";
+    height: var(--size-of-icon, 1.4em);
+    width: var(--size-of-icon, 1.4em);
+    border-radius: 20px;
+    left: var(--slider-offset, 0.3em);
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
+    transition: 0.4s;
+}
+
+.checkbox-wrapper-54 input:checked+.slider {
+    background-color: #303136;
+}
+
+.checkbox-wrapper-54 input:checked+.slider:before {
+    left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
+    background: #303136;
+    /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+    box-shadow: inset -3px -2px 5px -2px #8983f7,
+        inset -10px -4px 0 0 #a3dafb;
+}
+@media only screen and (max-width: 760px){
+    .to-do-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        font-size: 10px;
+        width: 70vw;
+        height: auto;
+    }
+    .filters {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    button.filter-btn {
+        width: fit-content;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 5px;
+        font-size: 11px;
+        font-family: monospace;
+    }
+    .add-task {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+    input#task-input {
+        padding: 5px;
+        margin: 0 auto;
+        border-color: floralwhite;
+        border-radius: 7px;
+    }    
+    button#add-task-btn {
+        padding: 4px;
+        border-radius: 6px;
+        border: unset;
+    }
+    input#task-due-date {
+        padding: 2px;
+        border: beige;
+        border-radius: 7px;
+        background: aliceblue;
+        font-size: small;
+    }
+    li {
+        width: 60vw;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
