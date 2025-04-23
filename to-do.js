@@ -12,19 +12,19 @@ const duetasks = document.getElementsByClassName("incomplete");
 // darkModeToggle.addEventListener("click",function(clr){
 //  if (clr === "dark") document.body.classList.toggle("dark-mode");
 //  else if (clr === "light") document.body.classList.toggle("light-mode");}
-total=()=>{
-if 
-}
-completedtask=()=>{
-  if (taskInput.value === "checked" ){
-  console.log("${tasklistcontainer}"); 
-    }else if ( taskInput.value != ""); 
-  }
+// total=()=>{
+// if 
+// }
+// completedtask=()=>{
+//   if (taskInput.value === "checked" ){
+//   console.log("${tasklistcontainer}"); 
+//     }else if ( taskInput.value != ""); 
+//   }
 
 
- pandingtasks=()=>{
-  if ( ) 
-  }
+//  pandingtasks=()=>{
+//   if ( ) 
+//   }
 
 
 
