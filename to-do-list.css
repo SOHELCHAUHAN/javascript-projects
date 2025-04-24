@@ -310,7 +310,7 @@ body.dark-mode .delete-btn {
         color: black;
     }
     li {
-        width: auto;
+        width: 65vw;
         height: auto;
         display: flex;
         align-items: center;
