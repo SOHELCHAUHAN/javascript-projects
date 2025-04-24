@@ -101,7 +101,7 @@ ul li::before {
     left: 10px;
 }
 ul li.checked{
-   color: #444;
+   color: #9c0303;
    text-decoration: line-through;
 }
 ul li.checked::before{
@@ -307,9 +307,10 @@ body.dark-mode .delete-btn {
         border-radius: 7px;
         background: aliceblue;
         font-size: small;
+        color: black;
     }
     li {
-        width: 60vw;
+        width: auto;
         height: auto;
         display: flex;
         align-items: center;
