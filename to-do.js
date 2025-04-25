@@ -7,8 +7,21 @@ const tasklistContainer = document.getElementById("task-list-container");
 const alltask = document.getElementsByClassName("all");
 const finished = document.getElementsByClassName("completed");
 const duetasks = document.getElementsByClassName("incomplete");
+const darkModeToggle = document.getElementById("toggle-dark-mode");
 
 
+function darkMode() {
+  document.body.classList.add("dark-mode");
+}
+
+function Lightmode() {
+  document.body.classList.remove("dark-mode");
+}
+
+let darkModeOld=()=> {
+  document.getElementsByClassName("to-do-container").style.backgroundColor="black";
+  document.getElementsByClassName("to-do-container").style.color="white";
+};
 
 function addTask() {
   if (taskInput.value === "") {
@@ -39,8 +52,8 @@ tasklistContainer.addEventListener("click",function(e){
 },false);
   
 // const total=()=>
-  // document.querySelectorAll("task-list");
-  // console.log("li");
+// document.querySelectorAll("task-list");
+// console.log("li");
 
 // -----
 
@@ -86,7 +99,6 @@ tasklistContainer.addEventListener("click",function(e){
 
 
 
-
 //  const task = tasklistContainer.getElementsByTagName("li");
 //  completedtask=()=>{
 //   if (tasklistContainer.classList.contains("checked"){
@@ -111,18 +123,3 @@ const loadData = () => {
 window.onload = () => {
   loadData();
 };
-
-// const darkModeToggle = document.getElementById("toggle-dark-mode");
-
-// darkModeToggle.addEventListener("click",function(clr){
-//  if (clr === "dark") document.body.classList.toggle("dark-mode");
-//  else if (clr === "light") document.body.classList.toggle("light-mode");}
-// total=()=>{
-// if ()
-// }
-
-
-//  pandingtasks=()=>{
-//   if ( ) 
-//   }
-
