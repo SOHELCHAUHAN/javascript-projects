@@ -8,20 +8,31 @@
     <link rel="stylesheet" href="to-do-list.css" />
 </head>
 
-<body class="dark-mode-body">
+<body class="dark-mode">
+    
     <div class="to-do-container">
         <h1>Your's To-Do List</h1>
-        <div class="dark-mode-toggle">
-            <div class="checkbox-wrapper-54">
+        <div class="change-color">
+            <button class="dark-mode button" onclick="darkMode();">Dark</button>
+            <button class="light-mode button" onclick="Lightmode();">Light</button>
+        </div>
+        <!-- <div id="timer-container">
+            <div id="timer-display">00:00</div>
+            <button id="timer-start">Start</button>
+            <button id="timer-stop">Stop</button>
+            <button id="timer-reset">Reset</button>
+        </div> -->
+        <!-- <div class="dark-mode-toggle"> -->
+            <!-- <div class="checkbox-wrapper-54">
                 <label class="switch">
                     <input type="checkbox" />
                     <span class="slider"></span>
                 </label>
-            </div>
+            </div> -->
 
             <!-- <label for="toggle-dark-mode">Dark Mode:</label>
             <input type="checkbox" id="toggle-dark-mode" /> -->
-        </div>
+        <!-- </div> -->
         <div class="add-task">
             <input type="text" id="task-input" placeholder="Add a new task..." />
             <input type="date" id="task-due-date" />
