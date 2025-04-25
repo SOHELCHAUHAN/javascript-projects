@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;    
+    background: linear-gradient(55deg, #24374b, #08cbea36);
+}
+h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 13px;
+    margin: 9px;
+    text-shadow: 2px 4px 4px #4b4a4b;
+    background: #84b6b1;
+    border: 1px solid;
+    border-radius: 10px;
+}
+input {
+    width: 48vw;
+    height: auto;
+    padding: 8px;
+    border: 1px solid;
+    border-radius: 9px;
+}
+input.checkbox {
+    width: 20px !important;
+    height: auto;
+}
+.showpswrd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid; */
+    padding: 3px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.Submit-btn{
+    cursor: pointer;
+    background-color: #c60202d1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 15vw;
+    height: auto;    
+}
+    
+    .Submit-btn:hover {
+    background-color: #2168d0;
+    }
+    
+    .Submit-btn:active {
+    background-color: #0d9b605c;
+    }
+    
+    input:focus {
+    border-color: #1652c1;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+    outline: none;
+    }
+    
+    .form-container {
+        width: 69vw;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 13px 14px 10px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    input::placeholder {
+    color: #999;
+    }
+
+
+    @media only screen and (max-width: 760px){
+        form.form-container {
+            width: 67vw;
+            margin: 0 auto;
+            padding: 18px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        input.Submit-btn {
+            width: 28vw;
+            padding: 6px;
+            margin: 0 auto;
+            font-size: small;
+        }
+        .showpswrd {
+            /* width: 33vw; */
+            font-size: small;
+            padding: 3px;
+            margin: 6px;
+            border: 0;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row-reverse;
+        }
+        input {
+            width: 54vw;
+            height: auto;
+            margin: 0 auto;
+            padding: 6px;
+            font-size: 10px;
+        }
+        h2 {
+            text-shadow: 2px 4px 4px #4b4a4b;
+            background: #84b6b1;
+            border: 1px solid;
+            border-radius: 10px;
+        }
+    }
