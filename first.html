@@ -1,19 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G-T-N Game</title>
-    <link rel="stylesheet" href="first.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="to-do-list.css" />
 </head>
-<body class="body">
-    <div class="container">
-        <h2 class="heading"> Number Gussing Game</h2>
-        <p class="para"> Guess the number between <strong>1 To 10 </strong>?</p>
-        <input type="number" id="userguss" placeholder="Enter your number"/>
-        <button id="Submitguess" onclick="checkguess()">Submit</button>
-        <p id = "message"></p>
+
+<body class="dark-mode">
+    
+    <div class="to-do-container">
+        <h1>Your's To-Do List</h1>
+        <div class="change-color">
+            <button class="dark-mode button" onclick="darkMode();">Dark</button>
+            <button class="light-mode button" onclick="Lightmode();">Light</button>
+        </div>
+        <!-- <div id="timer-container">
+            <div id="timer-display">00:00</div>
+            <button id="timer-start">Start</button>
+            <button id="timer-stop">Stop</button>
+            <button id="timer-reset">Reset</button>
+        </div> -->
+        <!-- <div class="dark-mode-toggle"> -->
+            <!-- <div class="checkbox-wrapper-54">
+                <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider"></span>
+                </label>
+            </div> -->
+
+            <!-- <label for="toggle-dark-mode">Dark Mode:</label>
+            <input type="checkbox" id="toggle-dark-mode" /> -->
+        <!-- </div> -->
+        <div class="add-task">
+            <input type="text" id="task-input" placeholder="Add a new task..." />
+            <input type="date" id="task-due-date" />
+            <button id="add-task-btn" onclick="addTask();">Add Task</button>
+        </div>
+        <div class="filters">
+            <button class="filter-btn all" onclick="total();" data-filter="all">All</button>
+            <button class="filter-btn completed" onclick="completedtask();" data-filter="completed">
+                Completed
+            </button>
+            <button class="filter-btn incomplete" onclick ="pandingtasks();" data-filter="incomplete">
+                Incomplete
+            </button>
+        </div>
+        <ul id="task-list-container" class="task-list">
+ <!-- <li class="checked"></li> -->
+        </ul>
     </div>
-    <script src="first.js"></script>
+    <script src="to-do.js"></script>
 </body>
+
 </html>
