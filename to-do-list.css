@@ -101,7 +101,7 @@ ul li::before {
     left: 10px;
 }
 ul li.checked{
-   color: #9c0303;
+   color: #910000;
    text-decoration: line-through;
 }
 ul li.checked::before{
@@ -189,7 +189,22 @@ body.dark-mode .task-list li.completed .task-name {
 body.dark-mode .delete-btn {
     color: #f66;
 }
-
+button.button {
+    width: 3vw;
+    margin: 8px auto;
+    padding: 4px;
+    border-radius: 38px;
+    border: aqua;
+    cursor: pointer;
+}
+button.dark-mode {
+    color: white;
+    background: black;
+}
+button.light-mode {
+    color: black;
+    background: whitesmoke;
+}
 /* for toggle bacground color*/
 
 .checkbox-wrapper-54 input[type="checkbox"] {
@@ -307,15 +322,18 @@ body.dark-mode .delete-btn {
         border-radius: 7px;
         background: aliceblue;
         font-size: small;
-        color: black;
     }
     li {
-        width: 65vw;
+        width: 60vw;
         height: auto;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         flex-wrap: wrap;
+    }
+    button.button {
+        width: 11vw;
+       
     }
 }
